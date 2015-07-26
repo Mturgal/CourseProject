@@ -1,26 +1,76 @@
-Code Book -Human Activity Recognition Using Smartphones Dataset
-===========
+# Converting Human Activity Recognition Using Smartphones Dataset into Tidy Data
 
-Study Design
------------
+This documents details the steps taken to tidy the "Human Activity Recognition Using Smartphones Dataset"
+into new summarized tidy data set.
+
+##Merging the training and the test sets to create one data set.
+
+Firstly the dataset is downloaded from the link https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+
+The main folder "UCI HAR Dataset" has two folders. Following files are primarily used to create the final data set.
+
+Test folder
+- subject_test.txt
+- X_test.txt
+- y_test.txt
+ ( and also the Inertial Signals folder which is not used) 
+Train Folder 
+- subject _train.txt
+- X_train.txt
+- Y_train.txt
+
+ 
+The main folder also includes two more files which are used for mapping the activity labels
+- activity_labels
+and also variable names
+- features
+
+##Combning all files into one dataset
+
+First we combined the Subject_test, X_Test  and Y_Test files with cbind, because the X_Test is denoted as the labels and Subject_test as the subject number. This has created the Test data with respective activity variable and Subject ID variable together.
+
+The same action is performed for the train data using Subject_train.txt,X_train.txt,Y_train.txt files in the Train folder. 
+
+As the final part in this part, we have combined both datasets into one big data set with rbind. 
+
+##Labeling The Variables
+
+The original dataset's variable names is in the feature.txt file under the "UCI HAR Dataset" folder.
+To extract the the column names from the feauter set we have used subsetting. And added the id and
+activity  labels to this vector, since we added both activity and subject columns in front of the the column names in previous step.
+
+Finally we used colnames() function to assign this new feature vector as the column names of the combined data frame
+
+
+## Extracting only the measurements on the mean and standard deviation for each measurement. 
+
+In order to find the variables with mean and standards, grep function is used to locate them in column names.
+With this we have a column name vector. To this vector we have added the first and second column numbers for activity and subject variables.This vector is used to subset a smaller data having only the data with mean and standard deviation.
+
+
+##Using descriptive activity names to name the activities in the data set
+
+First the Activity column is transformed to factor variable and giving the Activity Labels as levels and then transformed back to character.
 
 
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz are captured. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
-
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+## Appropriately labeling the data set with descriptive variable names. 
 
 
-### Raw Data
+Through converting abbreviations into words making the variables more descriptives, for this regular expressions and gsub functions are used.
+With this aim :
+1. Make.names function is used to removing illegal characters.
+2. Variables starting with"t" replaced with "time"
+3.Variables starting with f replaced with fastFourierTransform
+4."Mag" is replaced with "Magnitude"
+5."Gyro" is replaced with "Gyroscope"
+6."Acc" is replaced "Accelerometer".
+7."Std" is replaced with "StandardDeviation"
+8.Unnecessary dots are removed.
+9.Double Spaces are trimmed.
+10."Body.Body" is replaced with "Body."
 
-Notes: 
 
-- Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file.
-- The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
-- The gyroscope units are rad/seg.
-- A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen in the following link: http://www.youtube.com/watch?v=XOEN9W05_4A
+## Creating an independent tidy data set with the average of each variable for each activity and each subject.
 
-
-
-
+With the aggregate function a new data set is created that has a single row for every subjects every activity. Which makes 6 activities x 30 subjects =180 rows and 68 columns ( Subject ID, Activity ID and 66 columns having either mean or standard deviation data)
