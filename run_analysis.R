@@ -79,16 +79,16 @@ Step2Data[,1] <- as.character(factor(Step2Data[,1], labels=c("WALKING", "WALKING
 ##4.  Appropriately labels the data set with descriptive variable names. 
 ## make the activity labels as factors as pointed out in week 4 video 1
 Step2Data$Activity <- as.factor(Step2Data$Activity)
-
+  
 ## Through converting abbreviations into words making the variables more descriptives
 ## for this regular expressions and gsub functions are used from the inscruction videos
 descriptive <- colnames(Step2Data)
 descriptive <- make.names(descriptive)
 descriptive <- gsub("^t","time.",descriptive)
-descriptive <- gsub("^f","fastFourierTransform.",descriptive)
+descriptive <- gsub("^f","frequency.",descriptive)
 descriptive <- gsub("Mag","Magnitude.",descriptive)
 descriptive <- gsub("Gyro","Gyroscope.",descriptive)
-descriptive <- gsub("Acc","Accelerometer.",descriptive)
+descriptive <- gsub("Acc","Acceleration.",descriptive)
 descriptive <- gsub("Body","Body.",descriptive)
 descriptive <- gsub("\\.\\.","\\.",descriptive)
 descriptive <- gsub("\\.$","",descriptive)

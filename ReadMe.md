@@ -69,7 +69,7 @@ With this aim :
 7. "Std" is replaced with "StandardDeviation"
 8. Unnecessary dots are removed.
 9. Double Spaces are trimmed.
-10."Body.Body" is replaced with "Body."
+10. "Body.Body" is replaced with "Body."  
 
 
 ## Creating an independent tidy data set with the average of each variable for each activity and each subject.
