@@ -3,7 +3,7 @@
 This documents details the steps taken to tidy the "Human Activity Recognition Using Smartphones Dataset"
 into new summarized tidy data set.
 
-##Merging the training and the test sets to create one data set.
+##Merging the training and the test sets to create one data set
 
 Firstly the dataset is downloaded from the link https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
@@ -42,7 +42,7 @@ activity  labels to this vector, since we added both activity and subject column
 Finally we used colnames() function to assign this new feature vector as the column names of the combined data frame
 
 
-## Extracting only the measurements on the mean and standard deviation for each measurement. 
+## Extracting only the measurements on the mean and standard deviation for each measurement
 
 In order to find the variables with mean and standards, grep function is used to locate them in column names.
 With this we have a column name vector. To this vector we have added the first and second column numbers for activity and subject variables.This vector is used to subset a smaller data having only the data with mean and standard deviation.
@@ -54,7 +54,7 @@ First the Activity column is transformed to factor variable and giving the Activ
 
 
 
-## Appropriately labeling the data set with descriptive variable names. 
+## Appropriately labeling the data set with descriptive variable names  
 
 
 Through converting abbreviations into words making the variables more descriptives, for this regular expressions and gsub functions are used.
