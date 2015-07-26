@@ -25,7 +25,7 @@ The main folder also includes two more files which are used for mapping the acti
 and also variable names
 - features
 
-##Combning all files into one dataset
+##Combining all files into one dataset
 
 First we combined the Subject_test, X_Test  and Y_Test files with cbind, because the X_Test is denoted as the labels and Subject_test as the subject number. This has created the Test data with respective activity variable and Subject ID variable together.
 

@@ -289,12 +289,12 @@ Description:  Standard deviation of frequency Body Gyroscope Jerk Magnitude
 - Variable Name: Activity_ID                                                               
 Column:  67  
 Description:  Activity levels that are measured  
-1-WALKING  
-2-WALKING_UPSTAIRS  
-3-WALKING_DOWNSTAIRS  
+1-WALKING
+2-WALKING_UPSTAIRS
+3-WALKING_DOWNSTAIRS
 4-SITTING
-  
-5-STANDING  
+
+5-STANDING
 6-LAYING
   
   
