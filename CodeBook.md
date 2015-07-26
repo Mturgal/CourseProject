@@ -21,6 +21,73 @@ Notes:
 - The gyroscope units are rad/seg.
 - A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen in the following link: http://www.youtube.com/watch?v=XOEN9W05_4A
 
+### Variables
 
-
-
+ time.Body.Accelerometer.mean.X     
+ time.Body.Accelerometer.mean.Y    
+ time.Body.Accelerometer.mean.Z    
+ time.Gravity.Accelerometer.mean.X 
+ time.Gravity.Accelerometer.mean.Y 
+ time.Gravity.Accelerometer.mean.Z 
+ time.Body.Accelerometer.Jerk.mean.X
+ time.Body.Accelerometer.Jerk.mean.Y
+ time.Body.Accelerometer.Jerk.mean.Z
+ time.Body.Gyroscope.mean.X         
+ time.Body.Gyroscope.mean.Y         
+ time.Body.Gyroscope.mean.Z         
+ time.Body.Gyroscope.Jerk.mean.X    
+ time.Body.Gyroscope.Jerk.mean.Y    
+ time.Body.Gyroscope.Jerk.mean.Z    
+ time.Body.Accelerometer.Magnitude.mean
+ time.Gravity.Accelerometer.Magnitude.mean
+ time.Body.Accelerometer.Jerk.Magnitude.mean 
+ time.Body.Gyroscope.Magnitude.mean          
+ time.Body.Gyroscope.Jerk.Magnitude.mean     
+ fastFourierTransform.Body.Accelerometer.mean.X
+ fastFourierTransform.Body.Accelerometer.mean.Y
+ fastFourierTransform.Body.Accelerometer.mean.Z
+ fastFourierTransform.Body.Accelerometer.Jerk.mean.X  
+ fastFourierTransform.Body.Accelerometer.Jerk.mean.Y  
+ fastFourierTransform.Body.Accelerometer.Jerk.mean.Z  
+ fastFourierTransform.Body.Gyroscope.mean.X           
+ fastFourierTransform.Body.Gyroscope.mean.Y           
+ fastFourierTransform.Body.Gyroscope.mean.Z    
+ fastFourierTransform.Body.Accelerometer.Magnitude.mean   
+ fastFourierTransform.Body.Accelerometer.Jerk.Magnitude.mean
+ fastFourierTransform.Body.Gyroscope.Magnitude.mean       
+ fastFourierTransform.Body.Gyroscope.Jerk.Magnitude.mean  
+ time.Body.Accelerometer.StandardDeviation.X         
+ time.Body.Accelerometer.StandardDeviation.Y         
+ time.Body.Accelerometer.StandardDeviation.Z         
+ time.Gravity.Accelerometer.StandardDeviation.X      
+ time.Gravity.Accelerometer.StandardDeviation.Y      
+ time.Gravity.Accelerometer.StandardDeviation.Z      
+ time.Body.Accelerometer.Jerk.StandardDeviation.X    
+ time.Body.Accelerometer.Jerk.StandardDeviation.Y    
+ time.Body.Accelerometer.Jerk.StandardDeviation.Z    
+ time.Body.Gyroscope.StandardDeviation.X             
+ time.Body.Gyroscope.StandardDeviation.Y             
+ time.Body.Gyroscope.StandardDeviation.Z            
+ time.Body.Gyroscope.Jerk.StandardDeviation.X   
+ time.Body.Gyroscope.Jerk.StandardDeviation.Y  
+ time.Body.Gyroscope.Jerk.StandardDeviation.Z  
+ time.Body.Accelerometer.Magnitude.StandardDeviation 
+ time.Gravity.Accelerometer.Magnitude.StandardDeviation 
+ time.Body.Accelerometer.Jerk.Magnitude.StandardDeviation
+ time.Body.Gyroscope.Magnitude.StandardDeviation         
+ time.Body.Gyroscope.Jerk.Magnitude.StandardDeviation    
+ fastFourierTransform.Body.Accelerometer.StandardDeviation.X 
+ fastFourierTransform.Body.Accelerometer.StandardDeviation.Y 
+ fastFourierTransform.Body.Accelerometer.StandardDeviation.Z
+ fastFourierTransform.Body.Accelerometer.Jerk.StandardDeviation.X   
+ fastFourierTransform.Body.Accelerometer.Jerk.StandardDeviation.Y   
+ fastFourierTransform.Body.Accelerometer.Jerk.StandardDeviation.Z    
+ fastFourierTransform.Body.Gyroscope.StandardDeviation.X     
+ fastFourierTransform.Body.Gyroscope.StandardDeviation.Y     
+ fastFourierTransform.Body.Gyroscope.StandardDeviation.Z     
+ fastFourierTransform.Body.Accelerometer.Magnitude.StandardDeviation    
+ fastFourierTransform.Body.Accelerometer.Jerk.Magnitude.StandardDeviation
+ fastFourierTransform.Body.Gyroscope.Magnitude.StandardDeviation         
+ fastFourierTransform.Body.Gyroscope.Jerk.Magnitude.StandardDeviation    
+ Activity_ID                                                             
+ Subject_ID   

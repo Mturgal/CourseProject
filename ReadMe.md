@@ -59,15 +59,16 @@ First the Activity column is transformed to factor variable and giving the Activ
 
 Through converting abbreviations into words making the variables more descriptives, for this regular expressions and gsub functions are used.
 With this aim :
+
 1. Make.names function is used to removing illegal characters.
 2. Variables starting with"t" replaced with "time"
-3.Variables starting with f replaced with fastFourierTransform
-4."Mag" is replaced with "Magnitude"
-5."Gyro" is replaced with "Gyroscope"
-6."Acc" is replaced "Accelerometer".
-7."Std" is replaced with "StandardDeviation"
-8.Unnecessary dots are removed.
-9.Double Spaces are trimmed.
+3. Variables starting with f replaced with fastFourierTransform
+4. "Mag" is replaced with "Magnitude"
+5. "Gyro" is replaced with "Gyroscope"
+6. "Acc" is replaced "Accelerometer".
+7. "Std" is replaced with "StandardDeviation"
+8. Unnecessary dots are removed.
+9. Double Spaces are trimmed.
 10."Body.Body" is replaced with "Body."
 
 
