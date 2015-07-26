@@ -2,7 +2,12 @@
 ## "1.  Merges the training and the test sets to create one data set."
 
 ## set the working directory
-setwd("C:\\Users\\mturgal\\Documents\\KISISEL\\PROGRAMCILIK\\Data Science\\3_Getting and Cleaning Data\\CourseProject")
+##setwd("C:\\Users\\mturgal\\Documents\\KISISEL\\PROGRAMCILIK\\Data Science\\3_Getting and Cleaning Data\\CourseProject")
+## setwd("./KISISEL/PROGRAMCILIK/Data Science/3_Getting and Cleaning Data/CourseProject")
+> 
+  
+
+
 
 ## read the train data elements
 x_train <- read.table(".\\UCI HAR Dataset\\train\\X_train.txt")
@@ -109,5 +114,5 @@ Step5Data$Subjects <- NULL
 Step5Data$Subject <- NULL
 
 
-
-
+## Creating the final the tidy data set
+write.table(Step5Data, file="tidydata.txt",row.name=FALSE)
